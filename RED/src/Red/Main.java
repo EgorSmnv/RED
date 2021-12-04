@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class Main {
 
 	public static void main(String[] args) {
-		JFrame a = new JFrame("Calculator");
+		JFrame a = new JFrame("Calculator"); //
 		JButton b = new JButton("Рассчитать");
 		b.setBounds(20,550,200,40);
 		a.add(b);
