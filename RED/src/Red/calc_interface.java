@@ -11,15 +11,17 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class calc_interface {
+	public JTextField Price = new JTextField();
 	public calc_interface() {
 	JFrame a = new JFrame("Calculator");
 	JButton b = new JButton("Рассчитать");
 	b.setBounds(20,550,200,40);
+	b.addActionListener(new ButtonAction());
 	a.add(b);
 	//
 	
 	
-	JTextField Price = new JTextField();
+	Price = new JTextField();
 	Price.setBounds(20,90,200,30);
 	a.add(Price);
 	
@@ -93,5 +95,8 @@ public class calc_interface {
 	a.setSize(400,650);
 	a.setLayout(null);
 	a.setVisible(true);
+	}
+	public JTextField getTextField() {
+		return Price;
 	}
 }

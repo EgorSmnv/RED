@@ -1,5 +1,8 @@
 package Red;
 
 public class PaymentCalc extends AnnPayment{
-	String text;
+	public static void paymentCalc(String args[]) {
+		String text = Main.gui.Price.getText();
+		System.out.println(text);
+	}
 }
