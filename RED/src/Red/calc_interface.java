@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class calc_interface {
-	public static void calc_interface(String[] args) {
-	JFrame a = new JFrame("Calculator"); //
+	public calc_interface() {
+	JFrame a = new JFrame("Calculator");
 	JButton b = new JButton("Рассчитать");
 	b.setBounds(20,550,200,40);
 	a.add(b);
