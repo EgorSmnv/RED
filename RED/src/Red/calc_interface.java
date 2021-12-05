@@ -16,6 +16,7 @@ public class calc_interface {
 	JButton b = new JButton("Рассчитать");
 	b.setBounds(20,550,200,40);
 	a.add(b);
+	//
 	
 	
 	JTextField Price = new JTextField();
