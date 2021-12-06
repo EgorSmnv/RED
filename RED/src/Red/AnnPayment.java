@@ -1,12 +1,12 @@
 package Red;
 
 public abstract class AnnPayment {
-	public static float MounthPayment(int csize, int csrok, float cpercent) {
+	public float MounthPayment(int csize, int csrok, float cpercent) {
 		float payment;
 		payment = (csize * (cpercent / 12)) / (1 - (1 + cpercent / 12) * (1 - csrok * 12));
 		return payment;
 	}
-	public static float overPay(int csize, int csrok, float payment) {
+	public float overPay(int csize, int csrok, float payment) {
 		float overpay;
 		overpay = payment * csrok * 12 - csize;
 		return overpay;
