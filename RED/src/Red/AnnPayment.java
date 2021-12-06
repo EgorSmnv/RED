@@ -6,9 +6,9 @@ public abstract class AnnPayment {
 		payment = (csize * (cpercent / 12)) / (1 - (1 + cpercent / 12) * (1 - csrok * 12));
 		return payment;
 	}
-	public static float overPay(int csize, int csrok, float mpayment) {
+	public static float overPay(int csize, int csrok, float payment) {
 		float overpay;
-		overpay = mpayment * csrok * 12 - csize;
+		overpay = payment * csrok * 12 - csize;
 		return overpay;
 	}
 	

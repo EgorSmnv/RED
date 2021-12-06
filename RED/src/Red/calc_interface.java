@@ -11,13 +11,15 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class calc_interface {
-	public JTextField Price = new JTextField();
-	public JTextField FirstPay = new JTextField();
-	public JTextField Time = new JTextField();
-	public JTextField[] ArrData = {Price, FirstPay, Time};
+	private JTextField Price = new JTextField();
+	private JTextField FirstPay = new JTextField();
+	private JTextField Time = new JTextField();
+	private JTextField[] ArrData = {Price, FirstPay, Time};
 	public JTextField CreditSize = new JTextField();
 	public JTextField MonthPay = new JTextField();
 	public JTextField OverPay = new JTextField();
+
+	
 	public calc_interface() {
 	JFrame a = new JFrame("Calculator");
 	JButton b = new JButton("Рассчитать");
@@ -27,15 +29,12 @@ public class calc_interface {
 	//
 	
 	
-	Price = new JTextField();
 	Price.setBounds(20,90,200,30);
 	a.add(Price);
 	
-	FirstPay = new JTextField();
 	FirstPay.setBounds(20,150,200,30);
 	a.add(FirstPay);
 	
-	Time = new JTextField();
 	Time.setBounds(20,210,200,30);
 	a.add(Time);
 	
@@ -84,15 +83,12 @@ public class calc_interface {
 	L8.setBounds(20,470,200,30);
 	a.add(L8);
 	
-	CreditSize = new JTextField(Price.getText());
 	CreditSize.setBounds(20,380,200,30);
 	a.add(CreditSize);
 	
-	MonthPay = new JTextField();
 	MonthPay.setBounds(20,440,200,30);
 	a.add(MonthPay);
 	
-	OverPay = new JTextField();
 	OverPay.setBounds(20,500,200,30);
 	a.add(OverPay);
 	
@@ -102,14 +98,9 @@ public class calc_interface {
 	a.setLayout(null);
 	a.setVisible(true);
 	}
-	public JTextField getTextPrice() {
-		return Price;
-	}
-	public JTextField getTextFirst() {
-		return FirstPay;
-	}
-	public JTextField getTextTime() {
-		return Time;
+
+	public JTextField[] getArray() {
+		return ArrData;
 	}
 	
 }
