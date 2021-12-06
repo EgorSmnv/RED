@@ -9,9 +9,17 @@ public class ButtonAction implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JTextField Price = Main.gui.getTextField();
-		String text1 = Price.getText();
-		System.out.println(text1);
+		JTextField Price = Main.gui.getTextPrice();
+		String TextPrice = Price.getText();
+		Main.gui.CreditSize.setText(TextPrice);
+		
+		JTextField FirstPay = Main.gui.getTextFirst();
+		String TextFirst = FirstPay.getText();
+		Main.gui.MonthPay.setText(TextFirst);
+		
+		JTextField Time = Main.gui.getTextTime();
+		String TextTime = Time.getText();
+		Main.gui.OverPay.setText(TextTime);
 
 	}
 
