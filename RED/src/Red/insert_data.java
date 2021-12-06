@@ -1,5 +1,7 @@
 package Red;
 
+import javax.swing.JTextField;
+
 public abstract class insert_data {
 	String concrete_input;
 	String data_for_insert;
