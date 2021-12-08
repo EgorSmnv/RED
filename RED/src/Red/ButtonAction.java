@@ -34,42 +34,42 @@ public class ButtonAction implements ActionListener {
 		Main.gui.MonthPay.setText("Error"); 
 		} 
 		
-		JCheckBox InsurenceCheck = Main.gui.getInsurence(); 
-		JCheckBox FamilyCheck = Main.gui.getFamily(); 
-		 
-		if(InsurenceCheck.isSelected()) { 
-		System.out.println("Insurence is selected"); 
-		} 
-		 
-		if(FamilyCheck.isSelected()) { 
-		System.out.println("Family is selected"); 
-		} 
+		double percent = 10;  
 		 
 		JComboBox<String> combo = Main.gui.getComboBox(); 
 		String item = (String)combo.getSelectedItem(); 
 		String[] courses = Main.gui.getList(); 
 		 
 		if(item == courses[0]) { 
-		System.out.println(courses[0]); 
+		    percent = 9.2; 
 		} 
 		 
 		if(item == courses[1]) { 
-		System.out.println(courses[1]); 
+			percent = 9.2; 
 		} 
 		 
 		if(item == courses[2]) { 
-		System.out.println(courses[2]); 
+			percent = 9.9; 
 		} 
 		 
 		if(item == courses[3]) { 
-		System.out.println(courses[3]); 
+			percent = 9.3; 
+		} 
+		
+		JCheckBox InsurenceCheck = Main.gui.getInsurence(); 
+		JCheckBox FamilyCheck = Main.gui.getFamily(); 
+		 
+		if(InsurenceCheck.isSelected()) { 
+		    percent = percent - 1; 
 		} 
 		 
-		if(item == courses[4]) { 
-		System.out.println(courses[4]); 
-		} 
+		if(FamilyCheck.isSelected()) { 
+            percent = percent - 1; 
+		}
+		System.out.println(percent);
 		 
-		//float percent = 10; 
+		 
+		
 		//String creditsize = Integer.toString(price - firstpay); 
 		//PaymentCalc MPay = new PaymentCalc(price, time, percent); 
 		 

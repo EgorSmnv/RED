@@ -21,7 +21,7 @@ public class calc_interface {
 	    private JCheckBox Insurence = new JCheckBox("Страхование жизни и здоровья"); 
 	    private JCheckBox Family = new JCheckBox("Молодая семья"); 
 	    private JComboBox<String> Goal; 
-	    private String[] courses = {"Новостройка", "Вторичное жилье", "Готовое жилье", "Строительство дома","Загородный дома, земля"}; 
+	    private String[] courses = {"Готовое жильё", "Новостройка", "Строительство дома","Загородный дома, земля"}; 
 	     
 	     
 	public calc_interface() { 
