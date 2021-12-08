@@ -7,6 +7,8 @@ import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
+import Red.PaymentCalc;
+
 public class ButtonAction implements ActionListener {
 
 	@Override
@@ -31,7 +33,7 @@ public class ButtonAction implements ActionListener {
 		Main.gui.CreditSize.setText("Error"); 
 		Main.gui.MonthPay.setText("Error"); 
 		} 
-		 
+		
 		JCheckBox InsurenceCheck = Main.gui.getInsurence(); 
 		JCheckBox FamilyCheck = Main.gui.getFamily(); 
 		 
@@ -42,7 +44,7 @@ public class ButtonAction implements ActionListener {
 		if(FamilyCheck.isSelected()) { 
 		System.out.println("Family is selected"); 
 		} 
-		
+		 
 		JComboBox<String> combo = Main.gui.getComboBox(); 
 		String item = (String)combo.getSelectedItem(); 
 		String[] courses = Main.gui.getList(); 
@@ -65,8 +67,8 @@ public class ButtonAction implements ActionListener {
 		 
 		if(item == courses[4]) { 
 		System.out.println(courses[4]); 
-		}
-		
+		} 
+		 
 		//float percent = 10; 
 		//String creditsize = Integer.toString(price - firstpay); 
 		//PaymentCalc MPay = new PaymentCalc(price, time, percent); 
@@ -82,9 +84,6 @@ public class ButtonAction implements ActionListener {
 		 
 		 
 		
-		 
-		 
-
 		}  
 
-		} 
+		}

@@ -6,12 +6,16 @@ public class PaymentCalc extends AnnPayment {
 	int csize;
 	int csrok;
 	float cpercent;
-	public float MonthPaymentCalc(int csize, int csrok, float cpercent) {
+	public PaymentCalc(int csize, int csrok, float cpercent) {
 		mpayment = MounthPayment(csize, csrok, cpercent);
+		overpay = overPay(csize, csrok, mpayment);
+	}
+
+	public float getMPay() {
 		return mpayment;
 	}
-	public float OverpayCalc(int csize, int csrok, float mpayment) {
-		overpay = overPay(csize, csrok, mpayment);
+	
+	public float getOverpay() {
 		return overpay;
 	}
 }
