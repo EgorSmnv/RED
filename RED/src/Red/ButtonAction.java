@@ -13,6 +13,7 @@ public class ButtonAction implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		JTextField[] ArrData = Main.gui.getArray(); 
 		String TextPrice = ArrData[0].getText(); 
 		String TextFirst = ArrData[1].getText(); 
@@ -22,68 +23,72 @@ public class ButtonAction implements ActionListener {
 		int firstpay=0; 
 		int time=0; 
 		 
-		try { 
-		price = Integer.parseInt(TextPrice); 
-		firstpay = Integer.parseInt(TextFirst); 
-		time = Integer.parseInt(TextTime); 
+		boolean err = false;
+		
+		try {
+			price = Integer.parseInt(TextPrice); 
+			firstpay = Integer.parseInt(TextFirst); 
+			time = Integer.parseInt(TextTime); 
 		} 
 		catch(NumberFormatException nfe) 
 		{ 
-		Main.gui.OverPay.setText("Error"); 
-		Main.gui.CreditSize.setText("Error"); 
-		Main.gui.MonthPay.setText("Error"); 
-		} 
-		
-		double percent = 10;  
-		 
-		JComboBox<String> combo = Main.gui.getComboBox(); 
-		String item = (String)combo.getSelectedItem(); 
-		String[] courses = Main.gui.getList(); 
-		 
-		if(item == courses[0]) { 
-		    percent = 9.2; 
-		} 
-		 
-		if(item == courses[1]) { 
-			percent = 9.2; 
-		} 
-		 
-		if(item == courses[2]) { 
-			percent = 9.9; 
-		} 
-		 
-		if(item == courses[3]) { 
-			percent = 9.3; 
-		} 
-		
-		JCheckBox InsurenceCheck = Main.gui.getInsurence(); 
-		JCheckBox FamilyCheck = Main.gui.getFamily(); 
-		 
-		if(InsurenceCheck.isSelected()) { 
-		    percent = percent - 1; 
-		} 
-		 
-		if(FamilyCheck.isSelected()) { 
-            percent = percent - 1; 
+			Main.gui.setOutput("Error", "Error", "Error");
+			err = true;
 		}
-		System.out.println(percent);
-		 
-		 
 		
-		//String creditsize = Integer.toString(price - firstpay); 
-		//PaymentCalc MPay = new PaymentCalc(price, time, percent); 
-		 
-		//float monthpay = MPay.getMPay(); 
-		//PaymentCalc OPay = new PaymentCalc(price, time, percent); 
-		//float overpay = OPay.getOverpay(); 
-		//String OverPayText = Float.toString(monthpay); 
-		//String MPayText = Float.toString(overpay); 
-		//main.gui.OverPay.setText(MPayText); 
-		//main.gui.CreditSize.setText(creditsize); 
-		//main.gui.MonthPay.setText(OverPayText); 
-		 
-		 
-		
-		}  
-
+		if (err == false) {
+			
+			double percent = 10;  
+			 
+			JComboBox<String> combo = Main.gui.getComboBox(); 
+			String item = (String)combo.getSelectedItem(); 
+			String[] courses = Main.gui.getList(); 
+			 
+			if(item == courses[0]) { 
+			    percent = 9.2; 
+			} 
+			 
+			if(item == courses[1]) { 
+				percent = 9.2; 
+			} 
+			 
+			if(item == courses[2]) { 
+				percent = 9.9; 
+			} 
+			 
+			if(item == courses[3]) { 
+				percent = 9.3; 
+			} 
+			
+			JCheckBox InsurenceCheck = Main.gui.getInsurence(); 
+			JCheckBox FamilyCheck = Main.gui.getFamily(); 
+			 
+			if(InsurenceCheck.isSelected() && !(FamilyCheck.isSelected())) { 
+			    percent = percent - 1.0; 
+			} 
+			 
+			if(FamilyCheck.isSelected() && !(InsurenceCheck.isSelected())) { 
+	            percent = percent - 1.0; 
+			}
+			if(FamilyCheck.isSelected() && InsurenceCheck.isSelected()) { 
+	            percent = percent - 2.0; 
+			}
+			 
+			 
+			int creditsize = price - firstpay;
+			String Textcreditsize = Integer.toString(creditsize); 
+			PaymentCalc MPay = new PaymentCalc(creditsize, time, percent); 
+			double monthpay = MPay.getMPay(); 
+			//PaymentCalc OPay = new PaymentCalc(price, time, percent);
+			double overpay = MPay.getOverpay();
+			/*String OverPayText = Double.toString(monthpay);
+			String MPayText = Double.toString(overpay);*/
+			String OverPayText = String.format("%.0f",overpay);
+			String MPayText = String.format("%.0f",monthpay);
+			/*Main.gui.OverPay.setText(MPayText);
+			Main.gui.CreditSize.setText(Textcreditsize);
+			Main.gui.MonthPay.setText(OverPayText);*/
+			Main.gui.setOutput(Textcreditsize, MPayText, OverPayText);
 		}
+	}
+}

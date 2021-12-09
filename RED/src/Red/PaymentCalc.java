@@ -1,21 +1,18 @@
 package Red;
 
 public class PaymentCalc extends AnnPayment {
-	private float mpayment;
-	private float overpay;
-	int csize;
-	int csrok;
-	float cpercent;
-	public PaymentCalc(int csize, int csrok, float cpercent) {
+	private double mpayment;
+	private double overpay;
+	public PaymentCalc(int csize, int csrok, double cpercent) {
 		mpayment = MounthPayment(csize, csrok, cpercent);
 		overpay = overPay(csize, csrok, mpayment);
 	}
 
-	public float getMPay() {
+	public double getMPay() {
 		return mpayment;
 	}
 	
-	public float getOverpay() {
+	public double getOverpay() {
 		return overpay;
 	}
 }
