@@ -7,8 +7,6 @@ import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
-import Red.PaymentCalc;
-
 public class ButtonAction implements ActionListener {
 
 	@Override
