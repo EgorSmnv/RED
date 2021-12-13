@@ -27,7 +27,7 @@
 <outputDirectory>${basedir}/App</outputDirectory>
 <archive>
 <manifest>
-<mainClass>pdf.Main</mainClass>
+<mainClass>Red.Main</mainClass>
 </manifest>
 </archive>
 </configuration>
