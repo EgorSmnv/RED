@@ -14,7 +14,7 @@ public abstract class AnnPayment {
 		double overpayceil = Math.ceil(overpay);
 		return overpayceil;
 	}
-	public AnnPayment (String a) {
+	/*public AnnPayment (String a) {
 		System.out.println(a);
 	}
 	public AnnPayment (String a, String b) {
@@ -23,6 +23,6 @@ public abstract class AnnPayment {
 		}
 		else {
 			System.out.println(b);
-		}
+		}*/
 	}
 }

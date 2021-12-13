@@ -9,7 +9,6 @@ import javax.swing.JComboBox;
 
 public class ButtonAction implements ActionListener {
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		JTextField[] ArrData = Main.gui.getArray(); 

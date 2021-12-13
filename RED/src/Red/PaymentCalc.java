@@ -7,6 +7,11 @@ public class PaymentCalc extends AnnPayment {
 		mpayment = MounthPayment(csize, csrok, cpercent);
 		overpay = overPay(csize, csrok, mpayment);
 	}
+	public PaymentCalc(int csize, int csrok, double cpercent, int skidka) {
+		mpayment = MounthPayment(csize, csrok, cpercent);
+		overpay = overPay(csize, csrok, mpayment);
+		overpay = overpay - skidka;
+	}
 
 	public double getMPay() {
 		return mpayment;
