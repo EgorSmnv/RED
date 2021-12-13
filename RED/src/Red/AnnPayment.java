@@ -14,15 +14,4 @@ public abstract class AnnPayment {
 		double overpayceil = Math.ceil(overpay);
 		return overpayceil;
 	}
-	/*public AnnPayment (String a) {
-		System.out.println(a);
-	}
-	public AnnPayment (String a, String b) {
-		if (b.length() > a.length()) {
-			System.out.println(a);
-		}
-		else {
-			System.out.println(b);
-		}*/
-	}
 }

@@ -73,18 +73,15 @@ public class ButtonAction implements ActionListener {
 			 
 			 
 			int creditsize = price - firstpay;
+			
 			String Textcreditsize = Integer.toString(creditsize); 
+			
 			PaymentCalc MPay = new PaymentCalc(creditsize, time, percent); 
 			double monthpay = MPay.getMPay(); 
-			//PaymentCalc OPay = new PaymentCalc(price, time, percent);
 			double overpay = MPay.getOverpay();
-			/*String OverPayText = Double.toString(monthpay);
-			String MPayText = Double.toString(overpay);*/
+			
 			String OverPayText = String.format("%.0f",overpay);
 			String MPayText = String.format("%.0f",monthpay);
-			/*Main.gui.OverPay.setText(MPayText);
-			Main.gui.CreditSize.setText(Textcreditsize);
-			Main.gui.MonthPay.setText(OverPayText);*/
 			Main.gui.setOutput(Textcreditsize, MPayText, OverPayText);
 		}
 	}

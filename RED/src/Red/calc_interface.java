@@ -11,8 +11,8 @@ public class calc_interface {
 	private JTextField Price = new JTextField(); 
 	private JTextField FirstPay = new JTextField(); 
 	private JTextField Time = new JTextField(); 
-	
 	private JTextField[] ArrData = {Price, FirstPay, Time}; 
+	
 	private JTextField CreditSize = new JTextField(); 
 	private JTextField MonthPay = new JTextField(); 
 	private JTextField OverPay = new JTextField(); 
@@ -22,7 +22,8 @@ public class calc_interface {
 	private JComboBox<String> Goal; 
 	private String[] courses = {"Готовое жильё", "Новостройка", "Строительство дома","Загородный дома, земля"}; 
 	     
-	     
+	private JLabel design = new JLabel();
+	
 	public calc_interface() { 
 	
 		JFrame a = new JFrame("Calculator"); 
