@@ -21,8 +21,6 @@ public class calc_interface {
 	private JCheckBox Family = new JCheckBox("Молодая семья"); 
 	private JComboBox<String> Goal; 
 	private String[] courses = {"Готовое жильё", "Новостройка", "Строительство дома","Загородный дома, земля"}; 
-	     
-	private JLabel design = new JLabel();
 	
 	public calc_interface() { 
 	
