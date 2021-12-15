@@ -1,5 +1,5 @@
 [![Build Status](https://app.travis-ci.com/EgorSmnv/RED.svg?token=YhVotcUzciKnhsTrZMPW&branch=master)](https://app.travis-ci.com/EgorSmnv/RED)
-Разработчики
+*Разработчики*
 
 <img src="https://avatars.githubusercontent.com/u/91713222?v=4" width="50"> [Егор Семёнов](https://github.com/EgorSmnv)
 
