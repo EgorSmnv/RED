@@ -104,7 +104,7 @@ public class calc_interface {
 		L13.setBounds(25,685,400,30); 
 		a.add(L13); 
 		
-		JLabel L14 = new JLabel("<html> <font color=#777777>Прохоров Д.А<font/> <html/>"); 
+		JLabel L14 = new JLabel("<html> <font color=#777777>Прохоров Д.А.<font/> <html/>"); 
 		L14.setBounds(25,710,400,30); 
 		a.add(L14); 
 		
