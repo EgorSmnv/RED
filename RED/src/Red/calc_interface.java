@@ -54,7 +54,7 @@ public class calc_interface {
 		
 		BufferedImage img = null;
 		try {
-			ImageIO.read(new File("/home/rem/git/RED/RED/src/images/usatuLogo.png"));
+			img = ImageIO.read(new File("images/usatuLogo.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -86,7 +86,7 @@ public class calc_interface {
 		a.add(Goal); 
 		 
 		JLabel L4 = new JLabel("Цель кредита:"); 
-		L4.setBounds(20,0,200,30); 
+		L4.setBounds(20,120,200,30); 
 		a.add(L4); 
 		 
 		JLabel L5 = new JLabel("Условия снижения процентной ставки:"); 
